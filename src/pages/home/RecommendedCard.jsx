@@ -1,3 +1,4 @@
+import PaginationFunction from "@components/Pagination/PaginationFunction";
 import PlayerRecomendedCard from "@components/Player/PlayerRecommendedCard";
 
 const data = [
@@ -22,29 +23,138 @@ const data = [
         title: '21 - Makemeup Podcast Theme; launch it now !  ',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
     },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '23 - How to rapidly test any experience!',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...',
+    },
+    {
+        isNew: true,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '22 - Everything you need to know about mind mapping creation',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '21 - Makemeup Podcast Theme; launch it now !  ',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: true,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '23 - How to rapidly test any experience!',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...',
+    },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '22 - Everything you need to know about mind mapping creation',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: true,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '21 - Makemeup Podcast Theme; launch it now !  ',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: true,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '23 - How to rapidly test any experience!',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...',
+    },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '22 - Everything you need to know about mind mapping creation',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: true,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '21 - Makemeup Podcast Theme; launch it now !',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: true,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '23 - How to rapidly test any experience!',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...',
+    },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '22 - Everything you need to know about mind mapping creation',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '21 - Makemeup Podcast Theme; launch it now !  ',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: true,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '23 - How to rapidly test any experience!',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...',
+    },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '22 - Everything you need to know about mind mapping creation',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
+    {
+        isNew: false,
+        type: 'Business',
+        dataPost: 'Jan 18, 2021',
+        title: '21 - Makemeup Podcast Theme; launch it now !  ',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
+    },
 ]
-
 const RecommendedCard = () => {
 
     return (
+        <div className="flex flex-col pt-16 md:pt-24">
+            <PaginationFunction
+                itemsPerPage={3}
+                data={data}
+                title='Courses'
+                showValue1='3'
+                showValue2='6'
+                showValue3='9'
+                stylesRender="flex flex-col gap-12 md:gap-[70px] "
+                renderItem={(item, index) => (
+
+                    <RecommendedCardItem
+                        key={item.title + index}
+                        {...item}
+                    />
 
 
-        <div className="flex flex-col gap-12 md:gap-[70px] pt-16 md:pt-24 ">
-            {
-                data.map((item) => {
-                    return (
-                        <div>
-                            <RecommendedCardItem key={item.key} {...item} />
-                        </div>
-                    )
-                })
-            }
+                )}
+            />
         </div>
 
     )
 }
-
-
 const RecommendedCardItem = ({ isNew, type, dataPost, title, text }) => {
 
     return (

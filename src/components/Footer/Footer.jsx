@@ -5,9 +5,9 @@ import TwitterIcon from "@components/icon/TwitterIcon";
 
 const Footer = () => {
     return (
-        <div className="flex flex-col w-full pt-16 mt-16 border-t border-br-gray">
-            <div className="flex justify-between ">
-                <div className="flex flex-col text-icon-gray heading5-semibold gap-[9px]">
+        <div className="flex flex-col w-full pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-br-gray">
+            <div className="flex justify-between flex-col gap-y-8 gap-6 sm:flex-row">
+                <div className="flex flex-col text-icon-gray heading5-semibold gap-[9px] ">
                     <p className="footer-hover">Episodes</p>
                     <p className="footer-hover">Blog</p>
                     <p className="footer-hover">Contact</p>
@@ -27,7 +27,7 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
-            <p className="text-center pt-[90px]  ">PodcastTheme by VitaThemes | Privacy policy </p>
+            <p className="text-center pt-16 sm:pt-[90px]  ">PodcastTheme by VitaThemes | Privacy policy </p>
             <div className="flex  pt-6 gap-6 justify-center items-start mb-[30px] md:mb-[46px] ">
                 <a href='https://www.upwork.com/freelancers/~01a687c8f95b7913d7' target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-icon-gray hover:text-facebook pt-[1px] hover:scale-125 duration-300">
                     <FacebookIcon />

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import '../ui/CustomSelect.css';
-import ArrowDown from '@/components/PageCategories/icon/ArrowDown';
+import '@components/Pagination/CustomSelect.css';
+import ArrowDown from '@components/icon/ArrowDownPagination';
 
 const CustomShow = ({ options, styles, text, styleheader, onOptionClick, selectedOption }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,7 @@ const CustomShow = ({ options, styles, text, styleheader, onOptionClick, selecte
     }, []);
 
     return (
-        <div className="custom-select" ref={dropdownRef}>
+        <div className="custom-select text-purple" ref={dropdownRef}>
             <div className={`${styleheader}`} onClick={handleToggle}>
                 {selectedOption ? selectedOption.label : `${text}`}
                 <span className={`custom-select__arrow ${isOpen ? 'open' : ''}`}> <ArrowDown /> </span>

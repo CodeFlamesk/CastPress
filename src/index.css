@@ -11,7 +11,7 @@
 
 @layer base {
   body {
-    font-family: 'Source Serif Pro';
+    font-family: 'Source Serif 4';
     font-weight: 400;
     font-display: swap;
   }
@@ -60,6 +60,10 @@
     @apply text-xs font-normal tracking-[0.16em];
   }
 
+  .pagination-courses {
+    @apply flex justify-center w-[30px] h-[30px] items-center text-icon-gray bg-gray rounded hover:bg-br-gray transition-all duration-300;
+  }
+
   .footer-hover {
     @apply hover:text-purple transition-colors duration-300 ease-in-out cursor-pointer;
   }
@@ -96,6 +100,58 @@
   .inputs-checkout:invalid:not(:placeholder-shown):not(:focus) {
     @apply border-red;
   }
+
+.mob-nav{
+  @apply uppercase text-sm font-semibold tracking-[2.24px] text-light-col;
+}
+.episodes-link{
+  @apply font-semibold text-sm tracking-[1.4px] uppercase text-gray-light;
 }
 
-@layer utilities {}
+
+
+
+}
+
+@layer utilities {
+
+
+:root {
+  --bar-bg: #212529;
+}
+
+.menu-icon {
+  @apply relative w-9 h-8 cursor-pointer ;
+}
+
+.menu-icon-checkbox {
+  @apply absolute w-full right-0 h-full opacity-0 cursor-pointer z-10;
+}
+
+.menu-icon div {
+  @apply absolute inset-0 w-[22px] h-[12px] m-auto flex flex-col justify-between;
+}
+
+.bar {
+  @apply block w-full h-[2px] bg-[var(--bar-bg)] rounded transition-all duration-300;
+}
+
+/* Анімація для перетворення на хрестик при відкритому меню */
+.menu-icon-checkbox:checked + div .bar:first-of-type {
+  @apply transform rotate-45 translate-y-[5px];
+}
+
+.menu-icon-checkbox:checked + div .bar:last-of-type {
+  @apply transform -rotate-45 -translate-y-[5px];
+}
+
+/* Ефект ховера тільки для закритого меню */
+.menu-icon:not(:has(input:checked)):hover .bar:first-of-type {
+  @apply w-[26px];
+}
+
+.menu-icon:not(:has(input:checked)):hover .bar:last-of-type {
+  @apply w-[12px];
+}
+
+}

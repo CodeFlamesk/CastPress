@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Subheading from '@components/ui/Subheading';
 import CustomShow from './ShowCard';
-import ArrowPagination from '@components/PageCategories/icon/ArrowPagination';
+import ArrowPagination from '@components/icon/ArrowPagination';
 
 export const Show = ({ itemsPerPage, setItemsPerPage, setCurrentPage, showValue1, showValue2, showValue3 }) => {
     const showFilters = [
@@ -75,11 +74,11 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
         <div className='flex flex-col'>
             <div ref={paginationScrollRef} className='flex justify-between items-center pb-4 relative'>
                 <div className='flex items-end gap-1'>
-                    <Subheading title={title} />
-                    <p className='text-xs font-semibold grey-900 pb-1'>({data.length})</p>
+                    <p className='  text-[18px] '>All</p>
+                    <p className='text-xs font-semibold grey-900 pb-3'>({data.length})</p>
                 </div>
-                <div className='flex items-center gap-3'>
-                    <Subheading title="Show:" />
+                <div className='flex items-center gap-3 '>
+                    <p className=' text-[18px]'>Show:</p>
                     <Show itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} setCurrentPage={setCurrentPage} showValue1={showValue1} showValue2={showValue2} showValue3={showValue3} />
                 </div>
             </div>
@@ -87,7 +86,7 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
             <div className={`${stylesRender}`}>
                 {currentItems.map(renderItem)}
             </div>
-            <div className="flex justify-center pt-6 ">
+            <div className="flex justify-start pt-12 sm:pt-16 gap-[5px] ">
                 {currentPage !== 1 && (
                     <button
                         className="pagination-courses text-gray-900 rounded-l-4r hover:text-blue-500 group border-grey-border cursor-pointer"
@@ -104,7 +103,7 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
                             setPreviousPage(currentPage);
                             setCurrentPage(number);
                         }}
-                        className={`pagination-courses text-gray-900 hover:text-blue-500 group cursor-pointer ${currentPage === number ? 'text-blue border border-blue' : 'border-grey-border'} text-base`}
+                        className={`pagination-courses  group cursor-pointer ${currentPage === number ? 'text-purple' : 'border-grey-border'} text-base`}
                     >
                         {number}
                     </button>
