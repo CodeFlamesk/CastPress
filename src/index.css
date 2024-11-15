@@ -65,7 +65,7 @@
   }
 
   .footer-hover {
-    @apply hover:text-purple transition-colors duration-300 ease-in-out cursor-pointer;
+    @apply hover:text-purple transition-colors duration-300 ease-in-out cursor-pointer max-w-max;
   }
 
   .inputs:focus {
@@ -73,7 +73,7 @@
   }
 
   .input-shadow {
-    box-shadow: inset 0px 0px 0px 50px #FFFFFF;
+    box-shadow: inset 0px 0px 0px 50px #F5F5F7;
   }
 
   .inputs:valid:not(:placeholder-shown) {
@@ -86,11 +86,11 @@
   }
 
   .inputs-checkout:placeholder-shown {
-    @apply border-white;
+    @apply border-gray ;
   }
 
   .inputs-checkout:focus {
-    @apply border-purple;
+    @apply border-purple ;
   }
 
   .inputs-checkout:valid:not(:placeholder-shown) {
@@ -100,7 +100,12 @@
   .inputs-checkout:invalid:not(:placeholder-shown):not(:focus) {
     @apply border-red;
   }
-
+.input-style{
+@apply  w-full h-[42px] px-[14px]  rounded  bg-gray border border-gray focus:outline-none text-sm font-normal  text-icon-gray  ;
+}
+.input-style:focus {
+  @apply border-purple;
+}
 .mob-nav{
   @apply uppercase text-sm font-semibold tracking-[2.24px] text-light-col;
 }

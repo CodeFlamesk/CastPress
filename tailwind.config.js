@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-module.exports = {
+export default {
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
@@ -8,33 +8,16 @@ module.exports = {
     './src/**/*.{js,jsx}',
   ],
   theme: {
-
     extend: {
-      lineHeight: {
-
-      },
-
+      lineHeight: {},
       borderColor: ['focus', 'valid', 'invalid'],
       outlineColor: ['focus', 'valid', 'invalid'],
-      screens: {
-
-
-      },
-      fontSize: {
-
-      },
-
-      spacing: {
-
-      },
-      borderRadius: {
-
-      },
-
+      screens: {},
+      fontSize: {},
+      spacing: {},
+      borderRadius: {},
     },
-
     colors: {
-
       "light-col": "#222222",
       "purple": "#7247CA",
       "hov-purple": "#58379B",
@@ -50,12 +33,8 @@ module.exports = {
       "facebook": "#17A9FD",
       "green": "#4CB051",
       "red": "#fe0000",
-
     },
-
   },
   plugins: [],
   variants: {},
-
-}
-
+};

@@ -12,7 +12,7 @@ const Home = () => {
         <>
             <Container style='justify-center flex-col items-center' >
                 <EpisodeBlock />
-                <RecommendedCard />
+                <RecommendedCard styles='pt-16 md:pt-24' />
                 <TeamCard />
                 <LatestPost />
             </Container>

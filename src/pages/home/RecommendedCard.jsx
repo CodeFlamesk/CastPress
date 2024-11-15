@@ -129,10 +129,10 @@ const data = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consect adipiscing elit...',
     },
 ]
-const RecommendedCard = () => {
+const RecommendedCard = ({styles}) => {
 
     return (
-        <div className="flex flex-col pt-16 md:pt-24">
+        <div className={`flex flex-col  ${styles}`}>
             <PaginationFunction
                 itemsPerPage={3}
                 data={data}

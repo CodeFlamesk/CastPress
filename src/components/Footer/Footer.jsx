@@ -1,16 +1,16 @@
 import BigArrowRightIcon from "@components/icon/BigArrowRightIcon";
-import FacebookIcon from "@components/icon/FacebookIcon";
-import GitHubIcon from "@components/icon/GitHubIcon";
-import TwitterIcon from "@components/icon/TwitterIcon";
+
+import LinkFacGitTwit from "@components/LinkFacGitTwit";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <div className="flex flex-col w-full pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-br-gray">
             <div className="flex justify-between flex-col gap-y-8 gap-6 sm:flex-row">
                 <div className="flex flex-col text-icon-gray heading5-semibold gap-[9px] ">
-                    <p className="footer-hover">Episodes</p>
+                    <Link to='/episode' className="footer-hover ">Episodes</Link>
                     <p className="footer-hover">Blog</p>
-                    <p className="footer-hover">Contact</p>
+                    <Link to='/contact' className="footer-hover">Contact</Link>
                     <p className="footer-hover">Donate</p>
                 </div>
                 <div className="flex flex-col max-w-[315px] w-full">
@@ -28,17 +28,7 @@ const Footer = () => {
                 </div>
             </div>
             <p className="text-center pt-16 sm:pt-[90px]  ">PodcastTheme by VitaThemes | Privacy policy </p>
-            <div className="flex  pt-6 gap-6 justify-center items-start mb-[30px] md:mb-[46px] ">
-                <a href='https://www.upwork.com/freelancers/~01a687c8f95b7913d7' target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-icon-gray hover:text-facebook pt-[1px] hover:scale-125 duration-300">
-                    <FacebookIcon />
-                </a>
-                <a href='https://www.upwork.com/freelancers/~01a687c8f95b7913d7' target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-icon-gray hover:text-black hover:scale-125 duration-300 ">
-                    <GitHubIcon width="18" height="18" />
-                </a>
-                <a href='https://www.upwork.com/freelancers/~01a687c8f95b7913d7' target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-icon-gray hover:text-twitter hover:scale-125 duration-300">
-                    <TwitterIcon width="17.65" height="15" />
-                </a>
-            </div>
+          <LinkFacGitTwit styles='mb-[30px] md:mb-[46px] pt-6'/>
         </div>
     );
 };

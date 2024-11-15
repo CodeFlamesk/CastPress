@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowDown from "./icon/ArrowDown";
 import BurgerBtn from "./icon/BurderBtn";
 import Like from "./icon/Like";
@@ -28,27 +29,27 @@ const Header = () => {
     }, [openMenu]);
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col border-b border-br-gray">
             <div className="mx-auto max-w-[1140px] w-full justify-between h-[106px] pt-[39px] px-5 flex z-50">
-                <p className="text-light-col font-normal logo text-[19px]">CastPress.</p>
+                <Link to='/' className="text-light-col font-normal logo text-[19px] max-h-max">CastPress.</Link>
 
                 <div className="gap-[39px] text-3 font-semibold text-light-col tracking-[1.92px] items-start hidden sm:flex">
                     <div className="flex items-center gap-2" onClick={toggleSelect}>
                         <p className="uppercase">Episodes</p>
                         <ArrowDown />
                         {openSelect && (
-                            <div className="flex flex-col border border-br-gray absolute p-4 min-w-[179px] top-16">
-                                <p>Season 1</p>
+                            <div className="flex flex-col border bg-white border-br-gray absolute p-4 min-w-[179px] top-16">
+                                <Link to='/episode/season' >Season 1</Link>
                                 <p>Season 2</p>
                                 <p>Season 3</p>
                             </div>
                         )}
                     </div>
                     <p className="uppercase">Blog</p>
-                    <p className="uppercase">Contact</p>
-                    <div className="flex gap-1.5 items-center">
+                    <Link to='/contact' className="uppercase">Contact</Link>
+                    <div className="flex gap-1.5 items-center text-purple">
                         <Like />
-                        <p className="text-purple uppercase">Donate</p>
+                        <p className=" uppercase">Donate</p>
                     </div>
                 </div>
 
@@ -84,7 +85,7 @@ const Header = () => {
                 <p className="mob-nav">Blog</p>
                 <p className="mob-nav">Contact</p>
 
-                <div className="flex gap-1.5 items-center">
+                <div className="flex gap-1.5 items-center ">
                     <Like />
                     <p className="mob-nav">Donate</p>
                 </div>
