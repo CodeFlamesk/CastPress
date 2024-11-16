@@ -147,8 +147,6 @@ const RecommendedCard = ({styles}) => {
                         key={item.title + index}
                         {...item}
                     />
-
-
                 )}
             />
         </div>

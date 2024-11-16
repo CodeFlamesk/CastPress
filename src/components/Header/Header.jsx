@@ -45,7 +45,7 @@ const Header = () => {
                             </div>
                         )}
                     </div>
-                    <p className="uppercase">Blog</p>
+                    <Link to='/blog' className="uppercase">Blog</Link>
                     <Link to='/contact' className="uppercase">Contact</Link>
                     <div className="flex gap-1.5 items-center text-purple">
                         <Like />
@@ -82,7 +82,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <p className="mob-nav">Blog</p>
+                <Link to='/blog' className="mob-nav">Blog</Link>
                 <p className="mob-nav">Contact</p>
 
                 <div className="flex gap-1.5 items-center ">

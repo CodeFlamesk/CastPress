@@ -59,11 +59,11 @@ const CommentsItem = ({ img, name, data, commentText, reply,  replyImg,  replyNa
                 <img src={img} alt={name} className="object-cover w-full h-full " />
             </div>
             <div className="flex flex-col pl-6">
-                <div className="flex gap-4 heading5-regular">
+                <div className="flex flex-col gap-y-1 md:flex-row gap-4 heading5-regular">
                     <p className="text-icon-gray capitalize">{name}</p>
                     <p className="text-gray-light">{data}</p>
                 </div>
-                <p className="pt-4 heading4-regular text-icon-gray ">{commentText}</p>
+                <p className="pt-3 heading4-regular text-icon-gray ">{commentText}</p>
                 <div className=" flex gap-3 pt-4 items-center pointer heading5-regular text-gray-light ">
                     <ReplyIcon />
                     <p>Reply</p>
@@ -74,17 +74,16 @@ const CommentsItem = ({ img, name, data, commentText, reply,  replyImg,  replyNa
                             <img src={replyImg} alt={replyName} className="object-cover w-full h-full " />
                         </div>
                         <div className="flex flex-col pl-6">
-                            <div className="flex gap-4 heading5-regular">
+                            <div className="flex flex-col gap-y-1 md:flex-row gap-4 heading5-regular">
                                 <p className="text-icon-gray capitalize">{replyName}</p>
                                 <p className="text-gray-light">{replyData}</p>
                             </div>
-                            <p className="pt-4 heading4-regular text-icon-gray ">{replyCommentText}</p>
+                            <p className="pt-3 heading4-regular text-icon-gray ">{replyCommentText}</p>
                             <div className=" flex gap-3 pt-4 items-center pointer heading5-regular text-gray-light ">
                                 <ReplyIcon />
                                 <p>Reply</p>
                             </div>
                         </div>
-
                     </div>
                 )}
             </div>

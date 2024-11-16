@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="flex flex-col w-full pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-br-gray">
-            <div className="flex justify-between flex-col gap-y-8 gap-6 sm:flex-row">
+        <div className="flex flex-col w-full pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-br-gray items-center">
+            <div className="flex justify-between flex-col gap-y-8 gap-6 sm:flex-row w-full">
                 <div className="flex flex-col text-icon-gray heading5-semibold gap-[9px] ">
                     <Link to='/episode' className="footer-hover ">Episodes</Link>
-                    <p className="footer-hover">Blog</p>
+                    <Link to='/blog'  className="footer-hover">Blog</Link>
                     <Link to='/contact' className="footer-hover">Contact</Link>
                     <p className="footer-hover">Donate</p>
                 </div>
@@ -27,9 +27,9 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
-            <p className="text-center pt-16 sm:pt-[90px]  ">PodcastTheme by VitaThemes | Privacy policy </p>
+            <Link to='/privacy-policy' className="text-center mt-16 sm:mt-[90px] max-w-max">PodcastTheme by VitaThemes | Privacy policy </Link>
           <LinkFacGitTwit styles='mb-[30px] md:mb-[46px] pt-6'/>
-        </div>
+                  </div>
     );
 };
 export default Footer;
