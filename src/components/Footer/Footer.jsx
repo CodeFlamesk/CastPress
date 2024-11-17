@@ -1,8 +1,6 @@
 import BigArrowRightIcon from "@components/icon/BigArrowRightIcon";
-
 import LinkFacGitTwit from "@components/LinkFacGitTwit";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
     return (
         <div className="flex flex-col w-full pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-br-gray items-center">
@@ -11,7 +9,7 @@ const Footer = () => {
                     <Link to='/episode' className="footer-hover ">Episodes</Link>
                     <Link to='/blog'  className="footer-hover">Blog</Link>
                     <Link to='/contact' className="footer-hover">Contact</Link>
-                    <p className="footer-hover">Donate</p>
+                    <Link to='/donate' className="footer-hover">Donate</Link>
                 </div>
                 <div className="flex flex-col max-w-[315px] w-full">
                     <p className="text-light-col text-base font-semibold tracking-[2.56px] uppercase">Newsletter</p>

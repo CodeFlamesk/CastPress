@@ -40,8 +40,8 @@ const Header = () => {
                         {openSelect && (
                             <div className="flex flex-col border bg-white border-br-gray absolute p-4 min-w-[179px] top-16">
                                 <Link to='/episode/season' >Season 1</Link>
-                                <p>Season 2</p>
-                                <p>Season 3</p>
+                                <Link to='/episode/season' >Season 2</Link>
+                                <Link to='/episode/season' >Season 3</Link>
                             </div>
                         )}
                     </div>
@@ -75,19 +75,19 @@ const Header = () => {
                         className={`flex flex-col gap-4 transition-all duration-300 ease-in-out ${openSelect ? 'opacity-100 max-h-max translate-y-0 z-10' : 'opacity-0 max-h-0 -translate-y-4'
                             }`}
                         style={{ overflow: 'hidden' }}
-                    >
-                        <p className="episodes-link pt-6">Season 1</p>
-                        <p className="episodes-link">Season 2</p>
-                        <p className="episodes-link">Season 3</p>
+                    >             
+                        <Link to='/episode/season ' className="episodes-link pt-6" >Season 1</Link>
+                        <Link to='/episode/season' className="episodes-link " >Season 2</Link>
+                        <Link to='/episode/season' className="episodes-link ">Season 3</Link>
                     </div>
                 </div>
 
                 <Link to='/blog' className="mob-nav">Blog</Link>
-                <p className="mob-nav">Contact</p>
-
+               
+                <Link to='/contact' className="mob-nav">Contact</Link>
                 <div className="flex gap-1.5 items-center ">
                     <Like />
-                    <p className="mob-nav">Donate</p>
+                    <Link to='/donate' className=" mob-nav">Donate</Link>
                 </div>
             </div>
         </div>

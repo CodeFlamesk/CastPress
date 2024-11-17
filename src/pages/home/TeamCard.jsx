@@ -51,7 +51,7 @@ const TeamCardItem = ({ img, position, name, twitterLink, githubLink, linkedInLi
                 <img src={img} alt="img-team" width='300' height='300' className="hover:scale-110 transition-all object-cover w-full h-full duration-300 ease-in-out" />
             </Link>
             <p className="pt-4 pl-4 heading3 text-purple uppercase tracking-[1.92px] ">{position}</p>
-            <Link to='/about' className="pt-2 pl-4 heading3 text-light-col">{name}</Link>
+            <Link to='/about' className="pt-2 pl-4 heading3 max-w-max hover:text-purple duration-300 transition-colors ease-in-out text-light-col">{name}</Link>
             <div className="flex pl-4 gap-4 pt-10">
                 <a href={linkedInLink} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-icon-gray hover:text-linkedIn w-[18px] h-[18px] hover:scale-125 duration-300">
                     <LinkedInIcon />
