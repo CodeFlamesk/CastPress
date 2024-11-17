@@ -3,6 +3,7 @@ import LinkedInIcon from "@components/icon/LinkedInIcon";
 import TwitterIcon from "@components/icon/TwitterIcon";
 import DirectorImg from "@pages/home/img/directorImg.webp";
 import EditorImg from "@pages/home/img/editorImg.webp";
+import { Link } from "react-router-dom";
 const data = [
     {
         img: DirectorImg,
@@ -29,7 +30,7 @@ const TeamCard = () => {
 
 
         <div className="flex flex-col pt-16 ">
-            <p>Team</p>
+            <p className="heading1 text-light-col">Team</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-[70px] pt-[25px]  ">
                 {
                     data.map((item) => {
@@ -46,11 +47,11 @@ const TeamCard = () => {
 const TeamCardItem = ({ img, position, name, twitterLink, githubLink, linkedInLink }) => {
     return (
         <div className="flex flex-col bg-gray rounded pb-5" >
-            <div className="w-300 h-300 overflow-hidden  rounded-t ">
+            <Link to='/about' className="w-300 h-300 overflow-hidden  rounded-t ">
                 <img src={img} alt="img-team" width='300' height='300' className="hover:scale-110 transition-all object-cover w-full h-full duration-300 ease-in-out" />
-            </div>
+            </Link>
             <p className="pt-4 pl-4 heading3 text-purple uppercase tracking-[1.92px] ">{position}</p>
-            <p className="pt-2 pl-4 heading3 text-light-col">{name}</p>
+            <Link to='/about' className="pt-2 pl-4 heading3 text-light-col">{name}</Link>
             <div className="flex pl-4 gap-4 pt-10">
                 <a href={linkedInLink} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-icon-gray hover:text-linkedIn w-[18px] h-[18px] hover:scale-125 duration-300">
                     <LinkedInIcon />

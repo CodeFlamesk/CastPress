@@ -11,6 +11,8 @@ import BlogHeadphonesPage from '@pages/BlogHeadphonesPage';
 import BlogCakePage from '@pages/BlogCakePage';
 import BlogClockPage from '@pages/BlogClockPage';
 import PrivacyPolicyPage from '@pages/PrivacyPolicyPage';
+import AboutPage from '@pages/AboutPage';
+import DonatePage from '@pages/DonatePage';
 const AppRouter = () => {
     return (
         <Routes>
@@ -25,6 +27,8 @@ const AppRouter = () => {
                 <Route path='/blog-time-page' element={<BlogClockPage />} />
                 <Route path='/blog-health-page' element={<BlogCakePage />} />
                 <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
+                <Route path='/about' element={<AboutPage />} />
+                <Route path='/donate' element={<DonatePage />} />
             </Route>
 
         </Routes>

@@ -13,7 +13,7 @@ const ErrorPage = () => {
             <p className="text-icon-gray text-center text-base leading-[25px] ">Try a phrase in search box or back to home and start again.</p>
 
             <Link to="/" className="flex gap-2 max-w-max rounded mt-[22px] items-center justify-center text-sm text-white  bg-purple py-[11px] px-[22px]  ">
-                <p>HOMEPAGE</p>
+                <p className="heading5-regular ">HOMEPAGE</p>
                 <ArrowRightIcon />
             </Link>
 

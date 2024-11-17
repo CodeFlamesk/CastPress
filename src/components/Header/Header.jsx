@@ -49,7 +49,7 @@ const Header = () => {
                     <Link to='/contact' className="uppercase">Contact</Link>
                     <div className="flex gap-1.5 items-center text-purple">
                         <Like />
-                        <p className=" uppercase">Donate</p>
+                        <Link to='/donate' className=" uppercase">Donate</Link>
                     </div>
                 </div>
 
