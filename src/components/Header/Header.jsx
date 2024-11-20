@@ -52,7 +52,7 @@ const Header = () => {
 
                 <div className="gap-[39px] text-3 font-semibold text-light-col tracking-[1.92px] items-start hidden sm:flex" >
                     <div className="flex items-center gap-2 relative" onClick={toggleSelect} ref={dropdownRef} >
-                        <p className="uppercase cursor-pointer ">Episodes</p>
+                        <p className="uppercase cursor-pointer hover-header">Episodes</p>
                         <p className={`${openSelect ? 'rotate-180' : 'rotate-0'} duration-300 transition-all ease-in-out`}><ArrowDown /></p>
                         
                         {openSelect && (
@@ -63,13 +63,13 @@ const Header = () => {
                             </div>
                         )}
                     </div>
-                    <Link to="/blog" className="uppercase">
+                    <Link to="/blog" className="uppercase hover-header">
                         Blog
                     </Link>
-                    <Link to="/contact" className="uppercase">
+                    <Link to="/contact" className="uppercase hover-header">
                         Contact
                     </Link>
-                    <div className="flex gap-1.5 items-center text-purple">
+                    <div className="flex gap-1.5 items-center text-purple hover:text-light-col duration-300 transition-colors ease-in-out ">
                         <Like />
                         <Link to="/donate" className="uppercase">
                             Donate
@@ -93,8 +93,8 @@ const Header = () => {
             >
                 <div className="flex flex-col items-center" >
                     <div className="flex gap-x-2 items-center cursor-pointer" onClick={toggleSelectNav}  >
-                        <p className="mob-nav">Episodes</p>
-                        <ArrowDown />
+                        <p className="mob-nav hover-header">Episodes</p>
+                        <p className={`${openSelectNav ? 'rotate-180' : 'rotate-0'} duration-300 transition-all ease-in-out`}><ArrowDown /></p>
                     </div>
 
                     <div 
@@ -117,16 +117,16 @@ const Header = () => {
                     </div>
                 </div>
 
-                <Link onClick={toggleOpenMenu} to="/blog" className="mob-nav">
+                <Link onClick={toggleOpenMenu} to="/blog" className="mob-nav hover-header">
                     Blog
                 </Link>
 
-                <Link onClick={toggleOpenMenu} to="/contact" className="mob-nav">
+                <Link onClick={toggleOpenMenu} to="/contact" className="mob-nav hover-header">
                     Contact
                 </Link>
-                <div className="flex gap-1.5 items-center ">
+                <div className="flex gap-1.5 items-center hover-header ">
                     <Like />
-                    <Link onClick={toggleOpenMenu} to="/donate" className="mob-nav">
+                    <Link onClick={toggleOpenMenu} to="/donate" className="mob-nav hover-header">
                         Donate
                     </Link>
                 </div>

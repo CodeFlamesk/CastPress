@@ -23,7 +23,9 @@
   .logo {
     font-family: 'Oswald', sans-serif;
   }
-
+.hover-header{
+  @apply hover:text-purple  duration-300 transition-colors ease-in-out;
+}
   .menuSelect {
     @apply text-sm font-semibold;
   }
