@@ -13,6 +13,8 @@ import BlogClockPage from '@pages/BlogClockPage';
 import PrivacyPolicyPage from '@pages/PrivacyPolicyPage';
 import AboutPage from '@pages/AboutPage';
 import DonatePage from '@pages/DonatePage';
+import EpisodeSecondPage from '@pages/EpisodeSecondPage';
+import EpisodeThirdPage from '@pages/EpisodeThirdPage';
 const AppRouter = () => {
     return (
         <Routes>
@@ -29,6 +31,9 @@ const AppRouter = () => {
                 <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
                 <Route path='/about' element={<AboutPage />} />
                 <Route path='/donate' element={<DonatePage />} />
+                <Route path='/podcast-second' element={<EpisodeSecondPage />} />
+                <Route path='/podcast-third' element={<EpisodeThirdPage />} />
+                
             </Route>
 
         </Routes>

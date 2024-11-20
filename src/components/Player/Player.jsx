@@ -1,15 +1,16 @@
-import PlayIcon from "./icon/PlayerIcon";
+import PlayIcon from "./icon/PlayIcon";
 import PauseIcon from "./icon/Pause";
 import React, { useRef, useState, useEffect } from "react";
-import PianoAudio from '@components/Player/audio/piano.mp3';
+
 import VolumeIcon from "./icon/VolumeIcon";
 
-const Player = () => {
+const Player = ({audio}) => {
     const [play, setPlay] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [volume, setVolume] = useState(0.5);
     const [showVolume, setShowVolume] = useState(false);
+    const [showPlayer, setShowPlayer] = useState(false)
     const audioRef = useRef(null);
 
     useEffect(() => {
@@ -67,19 +68,22 @@ const Player = () => {
 
     return (
         <div className="flex flex-col items-center w-full">
-            <div className="flex items-center gap-4 mt-8 w-full">
+            {!showPlayer ? (  <button onClick={setShowPlayer} className="flex gap-2 items-center mt-6  py-[7px] px-[15px] text-xs bg-gray hover:bg-purple rounded text-purple hover:text-white duration-300 ease-in-out transition-colors  ">
+                <PlayIcon />
+                <p>Episode page</p>
+            </button>) : (  <div className={`flex gap-4  mt-6 items-center  w-full duration-300 transition-all ease-in-out ${ !showPlayer ? '-translate-x-40' : ' translate-x-0'} `}>
                 <button
-                    className="flex items-center justify-center w-10 h-10 bg-gray-300 rounded-full hover:bg-purple-500 text-purple-500 transition duration-300"
+                    className="flex items-center justify-center w-[30px] h-[30px] rounded-full  transition duration-300"
                     onClick={togglePlay}
                 >
-                   <p className="flex items-center justify-center w-[30px] h-[30px]">{play ? <PauseIcon /> : <PlayIcon />}</p> 
+                    <p className="flex items-center justify-center w-[30px] h-[30px]">{play ? <PauseIcon /> : <PlayIcon />}</p>
                 </button>
                 <audio
                     ref={audioRef}
                     onTimeUpdate={updateTime}
                     onLoadedMetadata={handleLoadedMetadata}
                 >
-                    <source src={PianoAudio} type="audio/mpeg" />
+                    <source src={audio} type="audio/mpeg" />
                     Your browser does not support the audio element.
                 </audio>
                 <span className="font-normal text-light-col text-xs">
@@ -104,29 +108,31 @@ const Player = () => {
                         type="button"
                         aria-label="Setting the volume"
                         onClick={() => setShowVolume(!showVolume)}
-                        className="flex items-center justify-center w-8 h-8"
+                        className={`flex items-center justify-center w-[30px] h-[30px] ${showVolume && 'sm:mr-[100px]' } `}
                     >
                         <VolumeIcon />
                     </button>
                     {showVolume && (
                         <label
-                        className={`flex items-center absolute left-10 top-1 w-[100px] justify-center px-2 h-6 rounded-2xl transition-all duration-500 ease-in-out transform border border-light-col   ${showVolume ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px] pointer-events-none'}`}
-                        htmlFor="volume-control"
-                    >
-                        <input
-                            id="volume-control"
-                            type="range"
-                            min="0"
-                            max="1"
-                            step="0.1"
-                            value={volume}
-                            onChange={changeVolume}
-                            className={`w-full h-1 rounded-lg cursor-pointer transition-all focus:outline-none bg-purple accent-purple hover:bg-purple  `}
-                        />
-                    </label>
+                            className={`flex items-center absolute -rotate-90 sm:rotate-0 bottom-20 -right-8 sm:left-10 sm:top-1 w-[100px] justify-center px-2 h-6 rounded-2xl transition-all duration-500 ease-in-out transform border border-light-col bg-white  ${showVolume ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px] pointer-events-none'}`}
+                            htmlFor="volume-control"
+                        >
+                            <input
+                                id="volume-control"
+                                type="range"
+                                min="0"
+                                max="1"
+                                step="0.1"
+                                value={volume}
+                                onChange={changeVolume}
+                                className={`w-full h-1 rounded-lg cursor-pointer transition-all focus:outline-none bg-purple accent-purple hover:bg-purple  `}
+                            />
+                        </label>
                     )}
                 </div>
-            </div>
+            </div>)}
+          
+          
         </div>
     );
 };
