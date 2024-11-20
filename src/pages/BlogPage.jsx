@@ -101,7 +101,7 @@ const data = [
 const BlogPage = () => {
     return (
         <Container>
-        <div className="flex flex-col pt-16 w-full">
+        <div className="flex flex-col pt-12 md:pt-24 w-full">
             <p className="heading1 text-light-col justify-center flex sm:justify-start">Blog</p>
             <div className="flex flex-col pt-[25px] gap-10 md:gap-6 ">
                             <PaginationFunction
