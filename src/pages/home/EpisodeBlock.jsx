@@ -25,4 +25,4 @@ const EpisodeBlock = ({tytle , audio}) => {
         </div>
     );
 };
-export default EpisodeBlock; 
+export default EpisodeBlock;

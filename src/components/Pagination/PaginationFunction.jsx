@@ -92,6 +92,7 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
                         className="pagination-courses text-gray-900 rounded-l-4r hover:text-blue-500 group border-grey-border cursor-pointer"
                         onClick={prevPage}
                         disabled={currentPage === 1}
+                        aria-label="prev-page"
                     >
                         <ArrowPagination className="group-hover:scale-125 transition-all duration-300" />
                     </button>
@@ -104,7 +105,8 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
                             setCurrentPage(number);
                         }}
                         className={`pagination-courses  group cursor-pointer ${currentPage === number ? 'text-purple' : 'border-grey-border'} text-base`}
-                    >
+                    aria-label="open-page"
+                   >
                         {number}
                     </button>
                 ))}
@@ -113,6 +115,7 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
                         className="pagination-courses text-gray-900 rounded-r-4r hover:text-blue-500 group border-grey-border"
                         onClick={nextPage}
                         disabled={currentPage === totalPages}
+                         aria-label="next-page"
                     >
                         <ArrowPagination className="transform rotate-180 group-hover:scale-125 transition-all duration-300" />
                     </button>
