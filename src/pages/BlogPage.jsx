@@ -137,7 +137,7 @@ const BlogPageItem = ({ img, tytle, date, link }) => {
                 <p className='heading2 text-light-col text-center sm:text-start'>{tytle}</p>
                 <p className='flex sm:justify-start justify-center pt-4 heading5-regular text-gray-light'>{date}</p>
                 <p className=' flex sm:justify-start text-center justify-center mt-10 heading5-semibold text-purple hover:text-hov-purple  '>
-                    <Link to={link} className='cursor-pointer'>Read More</Link>
+                    <Link to={link} className='cursor-pointer'  aria-label="read more">Read More</Link>
                 </p>
             </div>
         </div>

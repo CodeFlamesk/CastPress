@@ -78,9 +78,10 @@ const Header = () => {
                 </div>
 
                 <button
-                    aria-label="Main Menu"
+                    aria-label="Menu"
                     className="w-[32px] transition-all h-[32px] duration-300 z-50 sm:hidden inline-block"
                     onClick={toggleOpenMenu}
+                    
                 >
                      <BurgerBtn isOpen={openMenu} />
                 </button>

@@ -68,7 +68,7 @@ const ContactPage = () => {
                 <button
                     type="submit"
                     className="flex gap-2 rounded transition-all duration-300 ease-in-out px-4 py-2 items-center bg-purple text-white hover:bg-gray hover:text-purple heading5-regular justify-center cursor-pointer max-w-max mt-10"
-                >
+                    aria-label="submit" >
                     <p>Submit</p>
                     <ArrowRightIcon />
                 </button>

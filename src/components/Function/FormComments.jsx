@@ -15,7 +15,7 @@ const FormComments = () => {
             <CheckBox customStyles='pt-8 '>
                 <p className="flex pt-[3px]  text-xs font-normal text-icon-gray ">Save my name, email, and website in this browser for the next time I comment</p>
             </CheckBox>
-            <button type="submit" className='flex gap-2 rounded transition-all duration-300 ease-in-out  px-4 py-2 items-center bg-purple text-white hover:bg-gray hover:text-purple heading5-regular justify-center cursor-pointer max-w-max mt-10  ' >
+            <button type="submit" className='flex gap-2 rounded transition-all duration-300 ease-in-out  px-4 py-2 items-center bg-purple text-white hover:bg-gray hover:text-purple heading5-regular justify-center cursor-pointer max-w-max mt-10  '  aria-label="prev-page">
                 <p>Submit</p>
                 <ArrowRightIcon />
             </button>
