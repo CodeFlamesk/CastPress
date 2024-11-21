@@ -2,12 +2,12 @@ import AppleIcon from "@components/Player/icon/AppleIcon";
 import SoundcloudIcon from "@components/Player/icon/SoundcloudIcon";
 import SpotifyIcon from "@components/Player/icon/SpotifyIcon";
 
-import AuthorImg from "@pages/home/img/authorImg.jpeg"
+import AuthorImg from "@pages/home/img/authorImg.webp"
 import Player from "@components/Player/Player";
 const EpisodeBlock = ({tytle , audio}) => {
     return (
         <div className="flex justify-center flex-col items-center adaptive-pt w-full">
-            <img src={AuthorImg} alt="author-img" width='180' height='180' />
+            <img src={AuthorImg} alt="author-img" width='270' height='270' />
             <p className="pt-[39px] text-[26px] font-semibold leading-8 text-center">{tytle}</p>
            <Player audio={audio}/>
             <p className="pt-[46px] font-semibold text-xs tracking-[1.92px] uppercase ">Listen on</p>
