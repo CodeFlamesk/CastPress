@@ -19,7 +19,7 @@ const Footer = () => {
                     <form>
                         <label htmlFor="email" className="relative flex items-center max-w-[315px] w-full h-[42px] bg-gray mt-[14px] rounded overflow-hidden">
                             <input id="email" type="email" className="border-gray pl-[14px] pr-[50px] box-border border-[2px] inputs  input-shadow focus:outline-none  rounded  focus:ring-0 bg-gray w-full h-full placeholder:text-xs text-xs  placeholder:font-normal font-normal placeholder:text-icon-gray text-icon-gray " placeholder="Email  adress..." required />
-                            <button type="submit" id="email" className="absolute right-[4px] top-[3px] flex justify-center items-center hover:bg-hov-purple transition-colors ease-in-out duration-300 bg-purple max-w-9 max-h-9 w-full h-full text-white rounded">
+                            <button type="submit" id="email" className="absolute right-[4px] top-[3px] flex justify-center items-center hover:bg-hov-purple transition-colors ease-in-out duration-300 bg-purple max-w-9 max-h-9 w-full h-full text-white rounded"  aria-label="sign">
                                 <BigArrowRightIcon />
                             </button>
                         </label>
