@@ -76,5 +76,4 @@ const ContactPage = () => {
         </Container>
     );
 };
-
 export default ContactPage;

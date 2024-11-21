@@ -56,10 +56,10 @@ const Header = () => {
                         <p className={`${openSelect ? 'rotate-180' : 'rotate-0'} duration-300 transition-all ease-in-out`}><ArrowDown /></p>
                         
                         {openSelect && (
-                            <div className="flex flex-col border bg-white border-br-gray absolute p-4 min-w-[179px] top-[30px]"  >
-                                <Link to="/episode/season">Season 1</Link>
-                                <Link to="/episode/season">Season 2</Link>
-                                <Link to="/episode/season">Season 3</Link>
+                            <div className="flex flex-col border bg-white border-br-gray absolute p-4 min-w-[129px] top-[30px]"  >
+                                <Link to="/episode/season" className="hover-header">Season 1</Link>
+                                <Link to="/episode/season" className="hover-header" >Season 2</Link>
+                                <Link to="/episode/season" className="hover-header" >Season 3</Link>
                             </div>
                         )}
                     </div>

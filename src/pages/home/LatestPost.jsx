@@ -45,7 +45,7 @@ const LatestPostItem = ({ img, tytle, date, link }) => {
 
         <div className="flex flex-col sm:flex-row gap-x-10 gap-y-4 w-full items-center">
             <div className='w-[180px] h-[180px] overflow-hidden rounded  '>
-                <img src={img} alt="post-img" className='object-cover hover:scale-110 transition-all  duration-300 ease-in-out w-full h-full' />
+                <img src={img} alt="post-img" className='object-cover hover:scale-110 transition-all  duration-300 ease-in-out w-full h-full' height='180' width='180' />
             </div>
             <div className='flex flex-col '>
                 <p className='heading2 text-light-col text-center sm:text-start'>{tytle}</p>
