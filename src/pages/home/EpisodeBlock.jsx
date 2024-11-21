@@ -7,7 +7,7 @@ import Player from "@components/Player/Player";
 const EpisodeBlock = ({tytle , audio}) => {
     return (
         <div className="flex justify-center flex-col items-center adaptive-pt w-full">
-            <img src={AuthorImg} alt="author-img" width='270' height='270' />
+            <img src={AuthorImg} alt="author-img" width='180' height='180' />
             <p className="pt-[39px] text-[26px] font-semibold leading-8 text-center">{tytle}</p>
            <Player audio={audio}/>
             <p className="pt-[46px] font-semibold text-xs tracking-[1.92px] uppercase ">Listen on</p>
