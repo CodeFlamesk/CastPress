@@ -28,6 +28,11 @@ CastPress is a pet project designed as a platform for listening to podcasts. It 
 - Implementing a comment and rating system for podcasts.  
 - Enhancing UI/UX for better user experience.  
 
+## Installation & Run
+
+1. Install dependencies: `npm i`
+2. Start the project: `npm run dev`
+3. 
 ## License  
 
 This project is created for educational purposes and is not intended for commercial use.  
