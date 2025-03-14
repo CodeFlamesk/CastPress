@@ -20,7 +20,7 @@ CastPress is a pet project designed as a platform for listening to podcasts. It 
 - **Tailwind CSS**  
 - **React Router**  
 - **JavaScript**  
-- **HTML**  
+
 
 ## Potential Improvements  
 
